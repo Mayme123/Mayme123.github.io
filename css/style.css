@@ -1,0 +1,370 @@
+/*------------------------------------*/
+/*--- SETUP ---*/
+/*------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background-color: white;
+    font-family: 'Rammetto One', sans-serif;
+    font-size: 24px;
+    text-rendering:optimizeLegibility; 
+}
+
+/*------------------------------------*/
+/*--- REUSABLE COMPONENTS ---*/
+/*------------------------------------*/
+
+a:link,
+a:visited{
+    text-decoration: none;
+    color: #333333;
+}
+
+h1{
+    color:#FCFAF9;
+}
+/*------------------------------------*/
+/*--- HEADER ---*/
+/*------------------------------------*/
+
+header{
+    position: relative;
+    background-color: #ECE4B7;
+    height: 100px;
+    overflow-y: hidden;
+}
+
+.repeated-img{
+    display: inline-block;
+    position: absolute;
+    width: 400px;
+    height: 100%;
+    background-image:url("../img/header-img.svg");
+}
+
+.nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.nav ul{ 
+    list-style:none; 
+    margin-right: 0px;
+    margin-top: 4%;
+}
+
+.nav ul li{ 
+    font-size: 140%;
+    padding-right: 50px;
+    display:inline-block;
+    letter-spacing: 4px;
+}
+
+.nav ul li:last-child{
+    padding-right: 20px;
+}
+
+.nav li a:hover,
+.nav li a:active{
+    color: #FCFAF9;
+    border-bottom: 4px solid #333333;
+    border-top: 4px solid #333333;
+    padding-bottom: 4%; 
+    padding-top: 4%;
+    transition: 0.2s;
+}
+
+/*------------------------------------*/
+/*--- ABOUT ME ---*/
+/*------------------------------------*/
+
+.about-me{
+    position: relative;
+    background-color: #02020B;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.about-me h1{
+    font-size: 400%;
+    letter-spacing: 10px;
+    margin-top: 10%;
+    margin-left: 8%;
+}
+
+.about-me h2{
+    font-family: 'Permanent marker', cursive;
+    display: inline-block;
+    margin-bottom: 100px;
+    margin-left: 8%;
+    letter-spacing: 5px;
+    color: #333333;
+}
+
+.lightbulbs{
+    position: absolute;
+    width: 35%;
+    height: auto;
+    top: 0;
+    right: 30px;
+}
+
+.lines-img{
+    width: 800px;
+    height: auto;
+    margin-left: 8%;
+    /*
+    position:absolute;
+    left: 3%;
+    bottom: 3%;
+    */
+}
+
+.about-me p{
+    color: #ECE4B7;
+    position: absolute;
+    right: 2%;
+    margin-top: -310px;
+    max-width: 700px;
+    font-size: 120%;
+    line-height: 180%;
+    letter-spacing: 5px;
+}
+
+.arrow-img{
+    z-index: 9999;
+    width: 20px;
+    height: 70px;
+    position: fixed;
+    bottom: 90px;
+    left: 20px;
+}
+
+/*------------------------------------*/
+/*--- PROJECTS ---*/
+/*------------------------------------*/
+
+.projects{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.row{
+    height: 50%;
+}
+
+.project-left{
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    float: left;
+    position: relative;
+    transition: 0.3s;
+}
+
+
+
+.project-right{
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    float: right;
+    position: relative;
+}
+
+
+.desc{
+    z-index:997;
+    font-family: 'permanent marker';
+    position: absolute;
+    height:100%;
+    width: 100%;
+    background-color: #ECE4B7;
+}
+
+.desc .demo-btn:link,
+.desc .demo-btn:visited{
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+    height: 100px;
+    width: 300px;
+    transition: 0.4s;
+    font-size: 220%;
+    padding-left: 12px;
+    padding-top: 15px;
+    border: 5px solid #02020B;
+    color: #02020B;
+}
+
+.desc .demo-btn:hover,
+.desc .demo-btn:active{
+    background-color: #02020B;
+    color: #FCFAF9;
+    transition: 0.4s;
+}
+
+.desc p{
+    font-size: 130%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 60px;
+    max-width: 600px;
+    word-wrap:break-word;
+    text-align:center;
+}
+
+.preview-container{
+    position:absolute;
+    height:100%;
+    width: 100%;
+    transition: 1s;
+    z-index: 997;
+}
+
+.top{
+    display:table;
+    z-index: 999;
+    position: absolute;
+    height:101%;
+    width: 100%;
+}
+
+.top h3{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 280%;
+}
+
+.top:hover{
+    opacity: .10;
+    transition: 0.8s;
+}
+
+.preview{
+    z-index: 998;
+    position: absolute;
+    height:100%;
+    width: 100%;
+    background-size:cover;
+    background-position: center;
+}
+
+.close-btn{
+    position: absolute;
+    left: 50px;
+    top: 20px;
+    display: inline-block;
+    color: #ECE4B7 !important;
+    height: 60px;
+    width: 60px;
+    font-size: 200%;
+    border-radius: 50%;
+    padding-left: 17px;
+    background-color: black;
+}
+.project-twitch .preview-container{
+}
+
+.twitch-preview{background-image:url(../img/twitch-streamers.jpg);}
+
+.twitch-top{
+    background-color: #832161;
+    color : #330036;
+    font-family: 'Bungee';
+    font-size: 80%;
+    transition: 0.6s;
+}
+
+.project-weather .preview-container{
+}
+
+.weather-preview{ background-image:url(../img/local-weather.jpg);}
+
+.weather-top{
+    background-color: #6E7DAB;
+    color : #FAFAFF;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700 !important;
+    transition: 0.6s;
+}
+
+
+.quotes-preview{background-image:url(../img/design-quotes.jpg);}
+
+.quotes-top{
+    background-color: #005377;
+    color : #D5C67A;
+    font-family: 'Permanent marker', monospace;
+    text-shadow: 9px 6px 0px #241623; 
+    transition: 0.6s;
+}
+
+.wiki-preview{ background-image:url(../img/wikiview.jpg);}
+
+.wiki-top{
+    background-color: #000000;
+    font-family : Spinnaker;
+    color: #FAFAFF;
+    transition: 0.6s;
+}
+
+/*------------------------------------*/
+/*--- CONTACT ---*/
+/*------------------------------------*/
+footer{
+    background-color:#02020B;
+    overflow: hidden;
+    position: relative;
+}
+
+footer ul{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+footer li{
+    display: inline-block;
+    margin-left: 10%;
+}
+
+footer li:first-child{
+    margin-left: 0;
+}
+
+.social-container{
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.social-link{
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    right: 0;
+    width: 300px;
+    transition: 0.4s;
+}
+
+.social-link:hover{
+    width: 280px;
+    transition: 0.4s;
+}
+
+footer h5{
+    color: #ECE4B7;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 30px;
+    margin-right: 30px;
+}

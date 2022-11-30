@@ -1,0 +1,83 @@
+body{
+  background : #005377;
+  background : rgba(0, 83, 119, 1);
+}
+
+a:link {
+  color : #EF798A;
+  color : rgb(239, 121, 138);
+}
+
+/* visited link */
+a:visited {
+  color : #EF798A;
+  color : rgb(239, 121, 138);
+}
+
+/* mouse over link */
+a:hover {
+  color : #EF798A;
+  color : rgb(239, 121, 138);
+}
+
+/* selected link */
+a:active {
+  color : #EF798A;
+  color : rgb(239, 121, 138);
+}
+
+.top{
+  margin-top: 5%;
+}
+
+.heading{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 116px;
+  color : #D5C67A;
+  color : rgb(213, 198, 122);
+  text-shadow: 9px 6px 0px #241623; 
+  margin-bottom: 5%;
+}
+
+.quote-box{
+  min-height: 300px;
+}
+
+.put-quote-here{
+  font-family : Lobster;
+  font-size : 38px;
+  color : #241623;
+  color : rgb(36, 22, 35);
+}
+
+.title{
+  font-family : Permanent Marker;
+  font-size : 46px;
+  color : #D5C67A;
+  color : rgb(213, 198, 122);
+  text-shadow: 5px 3px 0px #241623;
+}
+
+.bottom-bar{
+  margin-top: 40px;
+}
+
+.get-quote{
+  font-family : Permanent Marker;
+  font-size : 34px;
+  color : #EF798A;
+  color : rgb(239, 121, 138);
+   background : #005377;
+  background : rgba(0, 83, 119, 1);
+  border-style : Solid;
+  border-color : #EF798A;
+  border-color : rgba(239, 121, 138, 1);
+  border-width : 5px;
+  cursor: pointer;
+}
+
+.source{
+  font-family: Permanent Marker;
+  font-size: 48px;
+  text-decoration: underline;
+}
